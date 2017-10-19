@@ -51,10 +51,42 @@
           </ul>
         </app-header>
         <md-card class="multiple">
-          3 hours..
+          <div fxFlex [fxLayout]="'row'">
+            <div class="one flexitem" fxFlex>
+              <div class="stat-box">
+                <div class="value">3 hours</div>
+                <div class="description">Estimated time to Stake</div>
+              </div>
+            </div>
+            <div class="two flexitem" fxFlex>
+              <div class="stat-box">
+                <div class="value">1<span class="point">.</span><small>5</small>&nbsp;%</div>
+                <div class="description">Current Stake percentage</div>
+              </div>
+            </div>
+            <div class="three flexitem" fxFlex>
+              <div class="stat-box">
+                <div class="value">1<span class="point">.</span><small>4949327</small>&nbsp;PART</div>
+                <div class="description">Current network reward</div>
+              </div>
+            </div>
+          </div>
         </md-card>
         <md-card class="multiple">
-          Network stake weight
+          <div fxFlex [fxLayout]="'row'">
+            <div class="two flexitem" fxFlex>
+              <div class="stat-box">
+                <div class="value">2254764680994</div>
+                <div class="description">Current Stake weight</div>
+              </div>
+            </div>
+            <div class="two flexitem" fxFlex>
+              <div class="stat-box">
+                <div class="value">434972889332496</div>
+                <div class="description">Network Stake weight</div>
+              </div>
+            </div>
+          </div>
         </md-card>
 
         <app-header>

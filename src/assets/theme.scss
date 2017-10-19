@@ -1,5 +1,11 @@
 @import "theme/partgui-theme";
 
+$font: "Open Sans", sans-serif;
+
+$text-muted: #7E8790; // grey (for section titles, descriptions etc.)
+
+$bg-shadow: #E9E9E9; // lines, box shadows etc.
+
 /**
  * Side bar Menu.
  */
@@ -114,7 +120,8 @@
  * Cards
  */
 md-card.mat-card { // FIXME: remove the !important and solve overwriting
-  box-shadow: 0 1px 0 #E9E9E9 !important;
+  font-family: $font;
+  box-shadow: 0 1px 0 $bg-shadow !important;
 }
 
 
@@ -324,7 +331,7 @@ input[type="text"].md-bg-transparent{
 .header-nav{
    list-style-type: none;padding: 0;
     li {
-      font-size: 16px; font-weight: normal; text-transform: uppercase; color: #7E8790;
+      font-size: 16px; font-weight: normal; text-transform: uppercase; color: $text-muted;
     }
 }
 panel-header-title {
