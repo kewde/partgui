@@ -1,14 +1,14 @@
-.reserved-area {
-    height: 250px;
-    border-style: dashed;
-    border-width: 2px;
-    border-color: #EBEBEB;
-    background-color: #F7F7F7;
-    margin-bottom: 15px;
+$grey: #E9E9E9; // lines under titles etc.
+
+.header-nav {
+    padding: 0 0 20px; margin: 30px 0 30px;
+    border-bottom: 1px solid $grey;
 }
-.balance-bg {
-    background: #fff;
-    padding-bottom: 30px;
-    padding-top: 20px;
-    border-bottom: 1px solid #EAEAEA;
+
+.overview-content { // area with widgets
+    padding: 10px 50px;
+}
+
+md-card.multiple {
+    margin-bottom: 20px;
 }

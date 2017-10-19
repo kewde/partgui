@@ -1,29 +1,31 @@
-<md-card>
+<md-card class="balance-overview">
   <div class="container" [fxLayout]="'row'">
     <div fxFlex [fxLayout]="'row'">
-      <div class="one   flexitem " fxFlex>
+      <div class="one flexitem" fxFlex>
         <app-balance type="total_balance"></app-balance>
       </div>
-      <div class="two flexitem " fxFlex>
+      <div class="two flexitem" fxFlex>
         <app-balance type="balance"></app-balance>
       </div>
-      <div class="three flexitem " fxFlex>
+      <div class="three flexitem" fxFlex>
         <app-balance type="blind_balance"></app-balance>
       </div>
-      <div class="four flexitem " fxFlex>
+      <div class="four flexitem" fxFlex>
         <app-balance type="anon_balance"></app-balance>
       </div>
-      <div class="five flexitem " fxFlex>
+      <div class="five flexitem" fxFlex>
         <app-balance type="staked_balance"></app-balance>
       </div>
     </div>
   </div>
 </md-card>
 
-<md-card>
+
+<div class="overview-content">
   <div class="container" [fxLayout]="'row'">
     <div fxFlex [fxLayout]="'row'">
-      <div class="one   flexitem " fxFlex="50%">
+
+      <div class="one flexitem" fxFlex="50%">
         <app-header>
           <ul class="header-nav">
             <li>Recent Transactions</li>
@@ -36,30 +38,44 @@
           [display]="{'txDisplayAmount': 5, 'header': false, 'internalHeader': true, 'category': false, 'confirmations': false}">
         </transaction-table>
       </div>
+
+
       <div class="flexitem" fxFlex="50%">
-        <app-header>
-          <ul class="header-nav">
-            <li>Widget Section 2</li>
-          </ul>
-          <ul class="header-nav pull-right">
-            <!-- <li><a href="javascript:void(0)"><span class="icon fa fa-cog color-green"></span></a></li> -->
-          </ul>
-        </app-header>
-        <div class="reserved-area">
-        </div>
 
         <app-header>
           <ul class="header-nav">
-            <li>Widget Section 3</li>
+            <li>Staking Information</li>
           </ul>
           <ul class="header-nav pull-right">
             <!-- <li><a href="javascript:void(0)"><span class="icon fa fa-cog color-green"></span></a></li> -->
           </ul>
         </app-header>
-        <div class="reserved-area">
-        </div>
+        <md-card class="multiple">
+          3 hours..
+        </md-card>
+        <md-card class="multiple">
+          Network stake weight
+        </md-card>
+
+        <app-header>
+          <ul class="header-nav">
+            <li class="section-title">Cold Staking</li>
+          </ul>
+          <ul class="header-nav pull-right">
+            <!-- <li><a href="javascript:void(0)"><span class="icon fa fa-cog color-green"></span></a></li> -->
+          </ul>
+        </app-header>
+        <md-card class="multiple">
+          Cold Staking not enabled
+          <button class="mat-raised-button mat-primary">Add Cold Staking node key</button>
+        </md-card>
+        <md-card class="multiple">
+          Cold Staking enabled
+          <button class="mat-raised-button">Edit Cold Staking node key</button>
+        </md-card>
 
       </div>
+
     </div>
   </div>
-</md-card>
+</div>

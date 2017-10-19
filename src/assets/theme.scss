@@ -111,6 +111,14 @@
 }
 
 /**
+ * Cards
+ */
+md-card.mat-card { // FIXME: remove the !important and solve overwriting
+  box-shadow: 0 1px 0 #E9E9E9 !important;
+}
+
+
+/**
  *list
  */
 .icon-input {
@@ -315,8 +323,8 @@ input[type="text"].md-bg-transparent{
 
 .header-nav{
    list-style-type: none;padding: 0;
-    li{
-      font-weight: bold;
+    li {
+      font-size: 16px; font-weight: normal; text-transform: uppercase; color: #7E8790;
     }
 }
 panel-header-title {
