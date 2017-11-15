@@ -16,6 +16,10 @@ let rpcOptions;
 */
 function rpcCall (method, params, auth, callback) {
 
+  if(method.indexOf('send') !== -1) {
+    log.debug('rpc.js rpcCall method=' + method + ' (should not appear twice after tx');
+  }
+
   const postData = JSON.stringify({
     method: method,
     params: params
@@ -61,6 +65,11 @@ function rpcCall (method, params, auth, callback) {
       if (data.error !== null) {
         callback(data);
         return;
+      }
+
+      if(method.indexOf('send') !== -1) {
+        log.debug('rpc.js rpcCall result (also should not appear twice after tx');
+        log.debug(data);
       }
       callback(null, data);
     });
