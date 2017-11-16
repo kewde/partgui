@@ -124,6 +124,11 @@ function init(options) {
         daemon.startDaemon(true, callback);
 
       } else {
+
+        if(method.indexOf('send') !== -1) {
+          log.debug('rpc.js createObservable method=' + method + ' (should not appear twice after tx');
+        }
+
         rpcCall(method, params, auth, (error, response) => {
           if (error) {
             observer.error(error);
@@ -134,6 +139,10 @@ function init(options) {
       }
     });
   }
+
+  // maybe double listeners on rpc-channel?
+  // rxIpc.removeListeners('rpc-channel');
+
   rxIpc.registerListener('rpc-channel', createObservable);
 }
 
